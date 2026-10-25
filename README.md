@@ -1,6 +1,6 @@
 # Guía del comprobante de egreso
 
-Sitio educativo en español colombiano sobre el comprobante interno de egreso, sus soportes y el registro contable de un pago. Incluye fichas de documentos que se despliegan con hover, teclado o toque y un caso práctico con respuesta interactiva.
+Sitio educativo en español colombiano sobre el comprobante interno de egreso, sus soportes y el registro contable de un pago. Incluye un recorrido interactivo de cuatro etapas, fichas de documentos que se despliegan con hover, teclado o toque y un caso práctico con respuesta interactiva.
 
 ## Ejecutar en local
 
@@ -16,7 +16,7 @@ Abre `http://localhost:4173` en el navegador.
 
 - `index.html`: contenido y estructura semántica.
 - `styles.css`: identidad visual, composición adaptable y estados de accesibilidad.
-- `app.js`: navegación móvil y ejercicio interactivo.
+- `app.js`: navegación móvil, recorrido interactivo y ejercicio con retroalimentación.
 - `assets/`: marca SENA y fotografías usadas en la página.
 
 ## Fuentes de contenido

@@ -66,3 +66,75 @@ quizForm?.addEventListener('submit', (event) => {
     feedback.className = 'quiz-feedback is-wrong';
   }
 });
+
+const paymentSteps = [
+  {
+    kicker: 'ANTES DE GIRAR',
+    title: 'Autorizar el pago',
+    text: 'El área responsable confirma que la obligación existe, revisa la factura o el contrato y deja constancia de quién aprobó el desembolso.',
+    check: 'Beneficiario, valor y vencimiento coinciden con la obligación.',
+  },
+  {
+    kicker: 'TESORERÍA EN ACCIÓN',
+    title: 'Realizar el desembolso',
+    text: 'Tesorería paga por el medio definido y conserva el soporte de la operación: comprobante de transferencia, cheque o recibo de caja.',
+    check: 'El pago llegó al beneficiario correcto y por el valor autorizado.',
+  },
+  {
+    kicker: 'EL ASIENTO CUENTA LO OCURRIDO',
+    title: 'Registrar la salida',
+    text: 'El comprobante interno relaciona el pago con su asiento contable. Se debita la obligación o cuenta que corresponda y se acredita el medio de pago.',
+    check: 'Débitos y créditos cuadran y se vinculan con el pago realizado.',
+  },
+  {
+    kicker: 'LISTO PARA CONSULTAR',
+    title: 'Conservar la trazabilidad',
+    text: 'La organización archiva el comprobante junto con la autorización, la evidencia del pago y los documentos contables o fiscales relacionados.',
+    check: 'Cada soporte se puede consultar desde el comprobante y su consecutivo.',
+  },
+];
+
+const flowButtons = [...document.querySelectorAll('.flow-step')];
+const flowDetail = document.querySelector('.flow-detail');
+
+flowButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const step = paymentSteps[index];
+    if (!step || !flowDetail) return;
+
+    flowButtons.forEach((item, itemIndex) => {
+      const active = itemIndex === index;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+
+    flowDetail.classList.add('is-changing');
+    window.setTimeout(() => {
+      document.querySelector('#flow-detail-number').textContent = String(index + 1).padStart(2, '0');
+      document.querySelector('#flow-detail-kicker').textContent = step.kicker;
+      document.querySelector('#flow-detail-title').textContent = step.title;
+      document.querySelector('#flow-detail-text').textContent = step.text;
+      document.querySelector('#flow-detail-check').textContent = step.check;
+      const detailIcon = document.querySelector('#flow-detail-icon');
+      const selectedIcon = button.querySelector('svg');
+      if (detailIcon && selectedIcon) detailIcon.replaceChildren(...[...selectedIcon.cloneNode(true).childNodes]);
+      flowDetail.classList.remove('is-changing');
+    }, 120);
+  });
+});
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+if ('IntersectionObserver' in window && revealItems.length) {
+  document.documentElement.classList.add('motion-ready');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+}
