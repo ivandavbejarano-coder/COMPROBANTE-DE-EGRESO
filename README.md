@@ -17,7 +17,7 @@ Abre `http://localhost:4173` en el navegador.
 - `index.html`: contenido y estructura semántica.
 - `styles.css`: identidad visual, composición adaptable y estados de accesibilidad.
 - `app.js`: navegación móvil, recorrido interactivo y ejercicio con retroalimentación.
-- `assets/`: marca SENA y fotografías usadas en la página.
+- `assets/`: marca SENA, fotografías y el QR recortado de la actividad práctica final.
 
 ## Fuentes de contenido
 
@@ -29,3 +29,5 @@ Abre `http://localhost:4173` en el navegador.
 - [Decreto 2420 de 2015, Gestor Normativo](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=76745)
 
 El ejemplo contable es orientativo y explicita sus supuestos. Los nombres y códigos de cuenta deben ajustarse al plan contable y a las políticas de cada entidad.
+
+El código QR de cierre abre el reto práctico SENA: https://reto-comprobante-egreso.vercel.app/.
