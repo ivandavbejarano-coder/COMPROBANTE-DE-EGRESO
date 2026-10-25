@@ -17,7 +17,7 @@ Abre `http://localhost:4173` en el navegador.
 - `index.html`: contenido y estructura semántica.
 - `styles.css`: identidad visual, composición adaptable y estados de accesibilidad.
 - `app.js`: navegación móvil, recorrido interactivo y ejercicio con retroalimentación.
-- `assets/`: marca SENA, fotografías y el QR recortado de la actividad práctica final.
+- `assets/`: marca SENA, fotografías, ilustración transparente de los aprendices y el QR recortado de la actividad práctica final.
 
 ## Fuentes de contenido
 
