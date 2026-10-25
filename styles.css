@@ -156,3 +156,32 @@ h1 em{font-family:var(--serif);font-style:italic}
 @media(max-width:760px){.team-intro{padding:20px 20px 19px}.team-intro-bar{gap:8px;font-size:7px;letter-spacing:.07em}.team-intro-label{gap:6px}.team-intro-label svg{width:15px;height:15px}.team-intro-program{display:none}.team-intro-figure{width:100%;margin:3px auto 0}.team-intro-foot{display:grid;gap:11px;margin-top:0;padding-top:11px}.team-intro-foot p{gap:5px 8px;line-height:1.4}.team-intro-foot p>span{width:100%;margin:0}.team-intro-foot p>strong{font-size:14px}.team-intro-continue{justify-self:end}}
 @media(max-width:370px){.team-intro-bar{font-size:6px}.team-intro-foot p>strong{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.team-intro-figure,.team-intro-foot{animation:none}.team-intro-figure img{transition:none}.team-intro-continue svg{animation:none}}
+
+/* Ajustes de lectura: conservar etiquetas compactas, con tamaño cómodo. */
+.brand-copy strong,.footer-brand strong{font-size:12px;letter-spacing:.07em}
+.brand-copy span,.footer-brand small{font-size:13px}
+.eyebrow,.section-number,.vertical-note,.hero-meta,.hero-caption,.photo-label{font-size:11px}
+.team-intro-bar{font-size:11px}
+.team-intro-foot p>span{font-size:10px}
+.team-intro-continue{font-size:10px}
+.doc-tag,.card-reveal-inner p span{font-size:10px}
+.step-caption{font-size:12px}
+.flow-detail-copy>span,.flow-detail-check>span{font-size:11px}
+.comparison-table th,.entry-table thead th{font-size:11px}
+.assumption p{font-size:13px}
+.amount-list>div{font-size:14px}
+.entry-title{font-size:16px}
+.entry-table{font-size:12px}
+.entry-table tbody td:first-child{font-size:11px}
+.account-note{font-size:12px}
+.check-list li{font-size:14px}
+.check-list li span{font-size:11px}
+.quiz-option strong{font-size:14px}
+.quiz-option small{font-size:12px}
+.receipt-line>span,.receipt-total>span,.receipt-total small{font-size:10px}
+.receipt-foot{font-size:10px}
+.footer-sources>span{font-size:11px}
+.footer-sources a{font-size:13px}
+.footer-bottom{font-size:11px}
+.activity-qr>span{font-size:11px}
+@media(max-width:760px){.brand-copy strong{font-size:11px}.brand-copy span{font-size:12px}.team-intro-bar{font-size:10px;letter-spacing:.06em}.team-intro-foot p>strong{font-size:15px}.team-intro-foot p>span,.team-intro-continue{font-size:10px}.activity-copy h2{font-size:clamp(34px,9vw,42px)}.comparison-table th{font-size:10px}.entry-table thead th{font-size:10px}.footer-sources a{font-size:12px}.footer-bottom{font-size:10px}}
